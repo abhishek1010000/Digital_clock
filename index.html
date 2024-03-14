@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: cadetblue;
+        }
+        section{
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #F0F8FF;
+            background-image: url("sun.avif");
+            background-size: cover;
+            background-position: center;
+        }
+        section .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            height: 220px;
+            max-width: 560px;
+            width: 100%;
+            background: transparent;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+        }
+        section .container .time{
+            display: flex;
+            align-items: center;
+        }        
+
+        .container .time .time-colon{
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .time .time-colon .am_pm{
+            position: absolute;
+            top: 0;
+            right: -50px;
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .time .time-colon .time-text{
+            height: 100px;
+            width: 100px;
+            display: flex;
+            border-radius: 6px;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            background: transparent;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        .time .time-colon .time-text,
+        .time .time-colon .colon{
+            font-size: 50px;
+            font-weight: 600;
+        }
+
+
+        .time .time-colon .colon{
+            font-size: 50px;
+            margin: 0 10px;
+        }
+        .time .time-colon .time-text .text{
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="time">
+                <div class="time-colon">
+                    <div class="time-text">
+                        <span class="num hour_num">00</span>
+                        <span class="text">HOURS</span>
+                    </div>
+                    <span class="colon">:</span>
+                </div>
+                <div class="time-colon">
+                    <div class="time-text">
+                        <span class="num min_num">00</span>
+                        <span class="text">MINUTES</span>
+                    </div>
+                    <span class="colon">:</span>
+                </div>
+                <div class="time-colon">
+                    <div class="time-text">
+                        <span class="num sec_num">00</span>
+                        <span class="text">SECONDS</span>
+                    </div>
+                    <span class="am_pm">AM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./script.js"></script>
+</body>
+
+</html>
